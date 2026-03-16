@@ -123,7 +123,7 @@ Below depicts the distribution of the simulated test statistic compared to the o
 
 Prediction problem: Predict calories of recipes
 
-I am using a regression model to predict the 'calories' column of the dataset. The metric used to evaluate the model will be the R squared value since this is a regression model. Other metrics, such as accuracy, are stronger metrics when looking at classification models.
+I am using a regression model to predict the 'calories' column of the dataset. The metric used to evaluate the model will be the R squared value since this is a regression model. Other metrics, such as accuracy, are stronger metrics when looking at classification models. All the variables, such as sugar and sodium levels, are information that are established at the time of prediction.
 
 --
 
@@ -135,7 +135,7 @@ Data: Testing (unseen) and training (seen) data was generated from the original 
 
 Results: The model had R-squared values .04641 on the training data and 0.0634 on the testing data. 
 
-Performance: Overall, the performance of this model was fair since R-squared values are relatively low for both training and testing data. The R-sqared value is slightly higher for the testing data, but not by a lot, so there is minimal overfitting.
+Performance: Overall, the performance of this model was poor since R-squared values were so low for both training and testing data. The R-sqared value is slightly higher for the testing data, but not by a lot, so there is minimal overfitting.
 
 
 --
@@ -150,7 +150,7 @@ Parameter and Model Selection: When performing cross-validation, predicting on '
 
 Results: The training data had a R-squared value of 0.84916 and the test data had a R-squared value of 0.8567. The entire dataset had a R-squared value of 0.8504.
 
-Performance: The final model is a worse predictor of both the training and testing data since its R-squared values are higher than the baseline model's. Regardless, there was less difference between the R-squared values of the training and testing data for the final model. So this can indicate more less surprising predictions from the final model on unseen data.
+Performance: The final model is a better predictor of both the training and testing data since its R-squared values are higher than the baseline model's. There was also less difference between the R-squared values of the training and testing data for the final model. So this can indicate less surprising predictions from the final model on unseen data.
 
 --
 
@@ -169,4 +169,4 @@ Alternative Hypothesis: Our model is unfair. The difference in RMSE for recipes 
 
 p-value = 0.0
 
-Conclusion: Since the p-value is less than the signifiance level, we reject the null that our model is fair.  
+Conclusion: Since the p-value is less than the signifiance level, we reject the null that our model is fair. The model performs differently when dealing with different sugar levels.
